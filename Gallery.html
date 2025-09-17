@@ -10,8 +10,8 @@
     nav a {color:white; margin:0 10px; text-decoration:none; font-weight:bold;}
     header {padding:3rem 2rem; text-align:center; background:#7b1fa2; color:white;}
     main {padding:2rem; max-width:1000px; margin:0 auto;}
-    .gallery {display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:1rem;}
-    .gallery img {width:100%; height:auto; border-radius:5px; box-shadow:0 2px 4px rgba(0,0,0,0.1);}
+    .gallery {display:flex; flex-wrap:wrap; justify-content:center; gap:10px;}
+    .gallery img {width:100%; max-width:300px; height:auto; border-radius:5px; box-shadow:0 2px 4px rgba(0,0,0,0.1);}
     footer {background:#4a148c; color:white; padding:1rem; text-align:center; margin-top:2rem;}
   </style>
 </head>
@@ -35,10 +35,12 @@
   <!-- Main Content -->
   <main>
     <div class="gallery">
-      <img src="https://via.placeholder.com/300x200.png?text=Image+1" alt="Image 1">
-      <img src="https://via.placeholder.com/300x200.png?text=Image+2" alt="Image 2">
-      <img src="https://via.placeholder.com/300x200.png?text=Image+3" alt="Image 3">
-      <img src="https://via.placeholder.com/300x200.png?text=Image+4" alt="Image 4">
+      <img src="https://picsum.photos/300/200?random=1" alt="Image 1">
+      <img src="https://picsum.photos/300/200?random=2" alt="Image 2">
+      <img src="https://picsum.photos/300/200?random=3" alt="Image 3">
+      <img src="https://picsum.photos/300/200?random=4" alt="Image 4">
+      <img src="https://picsum.photos/300/200?random=5" alt="Image 5">
+      <img src="https://picsum.photos/300/200?random=6" alt="Image 6">
     </div>
   </main>
 
