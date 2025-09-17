@@ -1,200 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VedicPost - Hindu Scriptures & Spiritual Wisdom</title>
-  <meta name="description" content="VedicPost: Explore Hindu scriptures, Vedas, Bhagavad Gita, Upanishads, spirituality, and Indian culture. Learn, reflect, and connect with tradition.">
-  <meta name="keywords" content="Hinduism, Vedic, Vedas, Bhagavad Gita, Upanishads, spirituality, Indian culture, Hindu scriptures">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <style>
-    /* --- Global Styles --- */
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      background: linear-gradient(to bottom, #fff8f0, #fff3e0);
-      color: #333;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-      transition: 0.3s;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VedicPost - Hindu Scriptures & Spiritual Wisdom</title>
+<meta name="description" content="VedicPost: Explore Hindu scriptures, Vedas, Bhagavad Gita, Upanishads, spirituality, and Indian culture. Learn, reflect, and connect with tradition.">
+<meta name="keywords" content="Hinduism, Vedic, Vedas, Bhagavad Gita, Upanishads, spirituality, Indian culture, Hindu scriptures">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<style>
+/* --- Global --- */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #fff8f0, #fff3e0);
+  color: #333;
+  overflow-x: hidden;
+}
+a { text-decoration:none; color:inherit; transition:0.3s; }
 
-    /* --- Navigation Bar --- */
-    nav {
-      background: #bf360c;
-      padding: 1rem 0;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      font-weight: bold;
-      font-size: 1.1rem;
-      padding: 5px 10px;
-      border-radius: 5px;
-    }
-    nav a:hover {
-      background: gold;
-      color: #bf360c;
-      transform: scale(1.1);
-    }
+/* --- Glassmorphism Elements --- */
+.glass {
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.15);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+  border: 1px solid rgba(255,255,255,0.18);
+  padding: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.glass:hover { transform: translateY(-8px); box-shadow:0 12px 40px rgba(0,0,0,0.3); }
 
-    /* --- Header Section --- */
-    header {
-      padding: 4rem 2rem;
-      text-align: center;
-      background: linear-gradient(to right, #ff6f00, #ffca28);
-      color: #4e342e;
-      position: relative;
-      overflow: hidden;
-      background-image: url('indianhardimages-20250512-0001.jpg');
-      background-size: cover;
-      background-position: center;
-    }
-    header::after {
-      content: "";
-      background: rgba(255, 255, 255, 0.7);
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      z-index: -1;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-    }
-    header p {
-      font-size: 1.3rem;
-      margin-top: 0;
-    }
+/* --- Navigation --- */
+nav {
+  position: sticky;
+  top:0;
+  z-index:1000;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  padding:1rem;
+  background: rgba(191,54,12,0.6);
+  backdrop-filter: blur(10px);
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+  border-radius:0 0 20px 20px;
+}
+nav a {
+  color:white;
+  font-weight:bold;
+  padding:10px 20px;
+  border-radius:10px;
+}
+nav a:hover {
+  background:gold;
+  color:#bf360c;
+  transform: scale(1.1);
+}
 
-    /* --- Main Content --- */
-    main {
-      padding: 2rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-    .intro {
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
-      color: #5d4037;
-    }
+/* --- Header Hero --- */
+header {
+  position: relative;
+  height: 90vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:#4e342e;
+  background: linear-gradient(to right, #ff6f00, #ffca28);
+  background-image: url('indianhardimages-20250512-0001.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow:hidden;
+}
+header::after {
+  content:"";
+  position:absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(255,255,255,0.3);
+  z-index:0;
+}
+header h1 {
+  font-size:3rem;
+  margin:0.5rem 0;
+  z-index:1;
+  animation: fadeInDown 1s ease forwards;
+}
+header p {
+  font-size:1.3rem;
+  margin:0.5rem 0 2rem 0;
+  z-index:1;
+  animation: fadeInUp 1s ease forwards 0.5s;
+}
+header .cta {
+  display:inline-block;
+  padding:15px 30px;
+  border-radius:50px;
+  background: rgba(255,255,255,0.2);
+  color:#4e342e;
+  font-weight:bold;
+  border:1px solid rgba(255,255,255,0.3);
+  cursor:pointer;
+  backdrop-filter: blur(10px);
+  transition:0.4s;
+  z-index:1;
+}
+header .cta:hover { background: gold; color:#bf360c; transform: scale(1.05); }
 
-    /* --- Posts Preview --- */
-    .posts-preview {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-    .post-card {
-      background: white;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
-    }
-    .post-card:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-    }
-    .post-card img {
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-    .post-card h3 {
-      margin: 0.5rem 0;
-      color: #bf360c;
-    }
-    .post-card p {
-      font-size: 0.95rem;
-      color: #6d4c41;
-    }
+/* --- Main --- */
+main { max-width:1100px; margin:0 auto; padding:2rem; }
+section { margin-bottom:4rem; }
+.intro { text-align:center; font-size:1.2rem; color:#5d4037; }
+.posts-preview { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:2rem; }
+.post-card { position:relative; border-radius:15px; overflow:hidden; }
+.post-card img { border-radius:15px; display:block; }
+.post-card .glass { margin-top:-70px; text-align:center; }
+.post-card h3 { margin:0.5rem 0; color:#bf360c; }
+.post-card p { font-size:0.95rem; color:#6d4c41; }
 
-    /* --- Footer Section --- */
-    footer {
-      background: #bf360c;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-      font-size: 0.9rem;
-    }
+/* --- Quote Section --- */
+.quote {
+  text-align:center;
+  font-size:1.3rem;
+  font-style:italic;
+  color:#4e342e;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border-radius:15px;
+  padding:2rem;
+  margin:2rem auto;
+  max-width:800px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.2);
+}
 
-    /* --- Responsive Design --- */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      header p {
-        font-size: 1rem;
-      }
-      .posts-preview {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+/* --- Footer --- */
+footer {
+  background: rgba(191,54,12,0.6);
+  backdrop-filter: blur(12px);
+  text-align:center;
+  padding:2rem;
+  color:white;
+  border-radius:15px 15px 0 0;
+}
+
+/* --- Animations --- */
+@keyframes fadeInDown { 0% {opacity:0; transform:translateY(-30px);} 100% {opacity:1; transform:translateY(0);} }
+@keyframes fadeInUp { 0% {opacity:0; transform:translateY(30px);} 100% {opacity:1; transform:translateY(0);} }
+
+/* --- Responsive --- */
+@media(max-width:600px){
+  header h1 { font-size:2rem; }
+  header p { font-size:1rem; }
+  .posts-preview { grid-template-columns:1fr; }
+}
+</style>
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="posts.html">Posts</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<!-- Navigation -->
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="posts.html">Posts</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-  <!-- Header Section -->
-  <header>
-    <h1>VedicPost</h1>
-    <p>Connecting you with the wisdom of Hindu scriptures and spirituality</p>
-  </header>
+<!-- Header Hero -->
+<header>
+  <h1>VedicPost</h1>
+  <p>Connecting you with the wisdom of Hindu scriptures and spirituality</p>
+  <div class="cta" onclick="window.location.href='posts.html'">Explore Scriptures</div>
+</header>
 
-  <!-- Main Content -->
-  <main>
-    <section class="intro">
-      <p>Explore articles, reflections, and teachings from the Vedas, Bhagavad Gita, Upanishads, and more. Learn, meditate, and connect with Indian spiritual tradition.</p>
-    </section>
+<!-- Main Content -->
+<main>
+  <!-- About Section -->
+  <section class="intro glass">
+    <h2>About VedicPost</h2>
+    <p>VedicPost is your gateway to exploring Hindu spirituality. Dive deep into the teachings of the Vedas, Bhagavad Gita, and Upanishads. Connect with timeless wisdom and enrich your mind, heart, and soul.</p>
+  </section>
 
-    <section class="posts-preview">
-      <div class="post-card">
-        <img src="IMG-20250815-WA0041.jpg" alt="Bhagavad Gita">
+  <!-- Featured Posts -->
+  <section class="posts-preview">
+    <div class="post-card">
+      <img src="IMG-20250815-WA0041.jpg" alt="Bhagavad Gita">
+      <div class="glass">
         <h3>Bhagavad Gita Insights</h3>
         <p>Discover the eternal teachings of Krishna guiding Arjuna through life and duty.</p>
       </div>
-      <div class="post-card">
-        <img src="vishal.onslaught-20250515-0001.jpg" alt="Vedas">
+    </div>
+    <div class="post-card">
+      <img src="vishal.onslaught-20250515-0001.jpg" alt="Vedas">
+      <div class="glass">
         <h3>The Wisdom of Vedas</h3>
         <p>Dive into the knowledge preserved in the Vedic scriptures of India.</p>
       </div>
-      <div class="post-card">
-        <img src="IMG-20250522-WA0005.jpg" alt="Upanishads">
+    </div>
+    <div class="post-card">
+      <img src="IMG-20250522-WA0005.jpg" alt="Upanishads">
+      <div class="glass">
         <h3>Upanishads Philosophy</h3>
         <p>Explore the deep philosophical teachings and meditative wisdom of the Upanishads.</p>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <!-- Footer Section -->
-  <footer>
-    &copy; 2025 VedicPost | Contact: <a href="mailto:incognitomod22@gmail.com" style="color:white;">incognitomod22@gmail.com</a>
-  </footer>
+  <!-- Quote Section -->
+  <section class="quote">
+    "You have the right to work, but never to the fruit of work." – Bhagavad Gita, Chapter 2, Verse 47
+  </section>
+</main>
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 VedicPost | Contact: <a href="mailto:incognitomod22@gmail.com" style="color:white;">incognitomod22@gmail.com</a>
+</footer>
 
 </body>
 </html>
