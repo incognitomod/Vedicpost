@@ -10,8 +10,8 @@
     nav a {color:white; margin:0 10px; text-decoration:none; font-weight:bold;}
     header {padding:3rem 2rem; text-align:center; background:#7b1fa2; color:white;}
     main {padding:2rem; max-width:1000px; margin:0 auto;}
-    .gallery {display:flex; flex-wrap:wrap; justify-content:center; gap:10px;}
-    .gallery img {width:100%; max-width:300px; height:auto; border-radius:5px; box-shadow:0 2px 4px rgba(0,0,0,0.1);}
+    .gallery {display:grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap:1rem;}
+    .gallery img {width:100%; height:auto; border-radius:5px; box-shadow:0 2px 4px rgba(0,0,0,0.1);}
     footer {background:#4a148c; color:white; padding:1rem; text-align:center; margin-top:2rem;}
   </style>
 </head>
@@ -29,18 +29,17 @@
   <!-- Header -->
   <header>
     <h1>Gallery</h1>
-    <p>Explore our images and media content.</p>
+    <p>Explore images of Hindu scriptures and related artifacts.</p>
   </header>
 
   <!-- Main Content -->
   <main>
     <div class="gallery">
-      <img src="https://picsum.photos/300/200?random=1" alt="Image 1">
-      <img src="https://picsum.photos/300/200?random=2" alt="Image 2">
-      <img src="https://picsum.photos/300/200?random=3" alt="Image 3">
-      <img src="https://picsum.photos/300/200?random=4" alt="Image 4">
-      <img src="https://picsum.photos/300/200?random=5" alt="Image 5">
-      <img src="https://picsum.photos/300/200?random=6" alt="Image 6">
+      <img src="https://www.publicdomainpictures.net/pictures/20000/nahled/ancient-sanskrit-manuscript.jpg" alt="Ancient Sanskrit Manuscript">
+      <img src="https://www.publicdomainpictures.net/pictures/20000/nahled/vedic-manuscript.jpg" alt="Vedic Manuscript">
+      <img src="https://www.publicdomainpictures.net/pictures/20000/nahled/sacred-hindu-texts.jpg" alt="Sacred Hindu Texts">
+      <img src="https://www.publicdomainpictures.net/pictures/20000/nahled/bhagavad-gita-manuscript.jpg" alt="Bhagavad Gita Manuscript">
+      <img src="https://www.publicdomainpictures.net/pictures/20000/nahled/ancient-hindu-scriptures.jpg" alt="Ancient Hindu Scriptures">
     </div>
   </main>
 
