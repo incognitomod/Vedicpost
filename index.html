@@ -3,14 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VedicPost - Home</title>
+  <title>VedicPost - Insights on Hindu Scriptures & Spirituality</title>
+  <meta name="description" content="VedicPost provides insights, articles, and posts about Hindu scriptures, spirituality, and Indian culture. Explore our collection and learn more.">
+  <meta name="keywords" content="Vedic, Hindu scriptures, Bhagavad Gita, Vedas, spirituality, Indian culture, VedicPost">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
-    body {font-family: Arial, sans-serif; margin:0; background:#f8f9fa;}
+    /* Global Styles */
+    body {font-family: 'Arial', sans-serif; margin:0; background:#f8f9fa; line-height:1.6;}
+    a {text-decoration:none; color:inherit;}
+    img {max-width:100%; height:auto;}
+    
+    /* Navigation */
     nav {background:#4a148c; padding:1rem; text-align:center;}
-    nav a {color:white; margin:0 10px; text-decoration:none; font-weight:bold;}
-    header {padding:4rem 2rem; text-align:center; background:#7b1fa2; color:white;}
-    main {padding:2rem; text-align:center;}
-    footer {background:#4a148c; color:white; padding:1rem; text-align:center; margin-top:2rem;}
+    nav a {color:white; margin:0 10px; font-weight:bold; transition: color 0.3s;}
+    nav a:hover {color:#ffd700;}
+    
+    /* Header */
+    header {padding:3rem 2rem; text-align:center; background:#7b1fa2; color:white;}
+    header h1 {margin-bottom:0.5rem; font-size:2.5rem;}
+    header p {margin-top:0; font-size:1.2rem;}
+
+    /* Main Content */
+    main {padding:2rem; max-width:1000px; margin:0 auto;}
+    .intro {text-align:center; margin-bottom:2rem;}
+    .posts-preview {display:grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap:1.5rem;}
+    .post-card {background:white; padding:1rem; border-radius:5px; box-shadow:0 2px 6px rgba(0,0,0,0.1); transition: transform 0.3s;}
+    .post-card:hover {transform: translateY(-5px);}
+    .post-card img {border-radius:5px;}
+    .post-card h3 {margin:0.5rem 0;}
+    .post-card p {font-size:0.9rem; color:#555;}
+
+    /* Footer */
+    footer {background:#4a148c; color:white; padding:1rem; text-align:center; margin-top:2rem; font-size:0.9rem;}
+
+    /* Responsive tweaks */
+    @media (max-width:600px){
+      header h1 {font-size:2rem;}
+      .posts-preview {grid-template-columns: 1fr;}
+    }
   </style>
 </head>
 <body>
@@ -27,18 +57,37 @@
   <!-- Header -->
   <header>
     <h1>Welcome to VedicPost</h1>
-    <p>Your space for updates, insights, and more.</p>
+    <p>Insights, posts, and reflections on Hindu scriptures and spirituality.</p>
   </header>
 
   <!-- Main Content -->
   <main>
-    <h2>Latest Updates</h2>
-    <p>Check out our latest posts and gallery below.</p>
+    <section class="intro">
+      <p>Discover articles and reflections about the Vedas, Bhagavad Gita, Upanishads, and more. Stay connected to the wisdom of Hindu traditions.</p>
+    </section>
+
+    <section class="posts-preview">
+      <div class="post-card">
+        <img src="IMG-20250815-WA0041.jpg" alt="Sample post image 1">
+        <h3>Understanding the Bhagavad Gita</h3>
+        <p>An introduction to the timeless teachings of Krishna to Arjuna on duty, life, and spirituality.</p>
+      </div>
+      <div class="post-card">
+        <img src="vishal.onslaught-20250515-0001.jpg" alt="Sample post image 2">
+        <h3>The Wisdom of Vedas</h3>
+        <p>Exploring the eternal knowledge preserved in the Vedic scriptures of India.</p>
+      </div>
+      <div class="post-card">
+        <img src="IMG-20250522-WA0005.jpg" alt="Sample post image 3">
+        <h3>Upanishads: Inner Philosophy</h3>
+        <p>Delving into the philosophical depth of the Upanishads and their guidance for life.</p>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    &copy; 2025 VedicPost
+    &copy; 2025 VedicPost | Contact: <a href="mailto:incognitomod22@gmail.com" style="color:white;">incognitomod22@gmail.com</a>
   </footer>
 
 </body>
