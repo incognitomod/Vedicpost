@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VedicPost - Gallery</title>
+  <style>
+    body {font-family: Arial, sans-serif; margin:0; background:#f8f9fa;}
+    nav {background:#4a148c; padding:1rem; text-align:center;}
+    nav a {color:white; margin:0 10px; text-decoration:none; font-weight:bold;}
+    header {padding:3rem 2rem; text-align:center; background:#7b1fa2; color:white;}
+    main {padding:2rem; max-width:1000px; margin:0 auto;}
+    .gallery {display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:1rem;}
+    .gallery img {width:100%; height:auto; border-radius:5px; box-shadow:0 2px 4px rgba(0,0,0,0.1);}
+    footer {background:#4a148c; color:white; padding:1rem; text-align:center; margin-top:2rem;}
+  </style>
+</head>
+<body>
 
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="posts.html">Posts</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <h1>Gallery</h1>
+    <p>Explore our images and media content.</p>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x200.png?text=Image+1" alt="Image 1">
+      <img src="https://via.placeholder.com/300x200.png?text=Image+2" alt="Image 2">
+      <img src="https://via.placeholder.com/300x200.png?text=Image+3" alt="Image 3">
+      <img src="https://via.placeholder.com/300x200.png?text=Image+4" alt="Image 4">
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 VedicPost
+  </footer>
+
+</body>
+</html>
